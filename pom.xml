@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-mongo-rest-api</module>
+        <module>elastic-search</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
