@@ -1,0 +1,7 @@
+for stopping all dockers
+$ docker stop $(docker ps -qa)
+for stopping one docker
+$docker stop
+
+for run the dockert
+$docker-compose -f Path_to_your_docker_compose.yml_file up -d

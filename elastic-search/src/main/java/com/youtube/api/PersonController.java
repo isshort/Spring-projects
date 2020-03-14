@@ -13,8 +13,8 @@ import javax.annotation.PostConstruct;
 import java.util.Calendar;
 import java.util.List;
 
-@RequiredArgsConstructor
-@RestController
+@RequiredArgsConstructor //that's for Constructor for PersonController class
+@RestController //
 @RequestMapping("/person")
 public class PersonController {
 
@@ -34,5 +34,10 @@ public class PersonController {
     public ResponseEntity<List<Person>> getPerson(@PathVariable String search){
         List<Person> personList=personRepository.getByCustomerQuery(search);
         return   ResponseEntity.ok(personList);
+    }
+    @GetMapping("/{name}/{surname}")
+    public ResponseEntity<List<Person>> getPersonByNameOrSurname(@PathVariable String name, @PathVariable String surname){
+        List<Person> personList1=personRepository.findByNameLikeOrSurnameLike(name,surname);
+        return ResponseEntity.ok(personList1);
     }
 }
