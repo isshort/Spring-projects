@@ -1,7 +1,32 @@
 for stopping all dockers
+1)
 $ docker stop $(docker ps -qa)
+it its not working you can run bellow for stopping all
+$sudo docker rm -v $(sudo docker ps -aq -f status=exited)
+
 for stopping one docker
 $docker stop
 
 for run the dockert
 $docker-compose -f Path_to_your_docker_compose.yml_file up -d
+
+
+if occure this error
+Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use
+ERROR: Encountered errors while bringing up the project.
+
+
+
+There is only one reason you may be getting this error. You have PostgreSQL installed on your local machine and it's running, occupying the port 5432.
+
+You have the following options:
+
+    1) Disable (and remove from startup) PostgreSQL on your local machine. - Your Docker Compose will run.
+
+    $ sudo service postgresql stop
+
+    $ sudo update-rc.d postgresql disable
+
+   2) Use a different port in docker-compose. There is nothing wrong with applying '5433:5432'. Other services of your docker-compose will connect to postgres by 5432 port. From your local machine you'll be able you address postgres by localhost:5433.
+
+

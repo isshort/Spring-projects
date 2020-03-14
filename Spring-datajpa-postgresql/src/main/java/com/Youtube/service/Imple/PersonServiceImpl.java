@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -29,6 +31,8 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional //that's automate save to database
     public PersonDto save(PersonDto personDto) {
+         //buradaki adi alani bos olmamasi
+        Assert.isNull(personDto.getName(),"Name must not be empty");
         //save person to database
         Person person=new Person();
         person.setName(personDto.getName());
