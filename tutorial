@@ -30,3 +30,32 @@ You have the following options:
    2) Use a different port in docker-compose. There is nothing wrong with applying '5433:5432'. Other services of your docker-compose will connect to postgres by 5432 port. From your local machine you'll be able you address postgres by localhost:5433.
 
 
+
+using postgresql
+to show which one is run
+$ sudo docker ps
+run postgresql
+$sudo docker run --name postgres-0 -e POSTGRES_PASSWORD=12345678 -d -p 5432:5432  postgres:alpine
+
+to execute you can select the name  of  the running postgres and the bellow resource_db_1 is the name
+$sudo docker exec -it resources_db_1 bash
+
+use the username
+/# psql -U postgres
+now we are inside in the postgresql
+see actual the user which we have
+=# \du
+
+for creating the database you can write
+=# create database test;
+for showing the databases
+=# \l
+to use  or connect the selecting database for example we use the test database
+=# \c test
+
+to conect to the local host
+you can open your terminal and write
+$ psql -h localhost  -p 5432 -U postgres
+you can write your password to connect to local host i wrote myParola before
+
+

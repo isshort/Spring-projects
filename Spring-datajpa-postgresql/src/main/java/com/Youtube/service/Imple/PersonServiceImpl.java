@@ -32,7 +32,7 @@ public class PersonServiceImpl implements PersonService {
     @Transactional //that's automate save to database
     public PersonDto save(PersonDto personDto) {
          //buradaki adi alani bos olmamasi
-        Assert.isNull(personDto.getName(),"Name must not be empty");
+//        Assert.isNull(personDto.getName(),"Name must not be empty");
         //save person to database
         Person person=new Person();
         person.setName(personDto.getName());

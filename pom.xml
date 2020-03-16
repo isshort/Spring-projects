@@ -7,6 +7,7 @@
         <module>spring-mongo-rest-api</module>
         <module>elastic-search</module>
         <module>Spring-datajpa-postgresql</module>
+        <module>Alaket Practice</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
