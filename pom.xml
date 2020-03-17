@@ -8,6 +8,7 @@
         <module>elastic-search</module>
         <module>Spring-datajpa-postgresql</module>
         <module>Alaket Practice</module>
+        <module>spring-boot-api-doc</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>

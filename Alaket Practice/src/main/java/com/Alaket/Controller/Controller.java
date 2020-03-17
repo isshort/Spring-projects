@@ -22,6 +22,7 @@ public class Controller {
 
     @GetMapping
     public ResponseEntity<List<ProfileDto>>tumuntulistele(){
+
         return ResponseEntity.ok(profileService.getAll());
     }
 }

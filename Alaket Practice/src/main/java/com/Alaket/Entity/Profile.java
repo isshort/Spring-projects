@@ -12,6 +12,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 
 
 @Entity
@@ -38,7 +39,7 @@ public class Profile implements Serializable {
 
     @Column(length = 100,name = "email")
     private String email;
-    @Column(length = 15,name = "contact")
+    @Column(length = 15,name = "Contacts")
     private String contact;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
