@@ -9,6 +9,7 @@
         <module>Spring-datajpa-postgresql</module>
         <module>Alaket Practice</module>
         <module>spring-boot-api-doc</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
