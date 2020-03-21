@@ -9,6 +9,7 @@ public class ProfileDto {
     private Long id;
     private String name;
     private String last_name;
+    private String password;
     private String email;
     private String contact;
     private Date birth_date;

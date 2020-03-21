@@ -37,6 +37,9 @@ public class Profile implements Serializable {
     @Column(length = 75,name = "last_name")
     private String last_name;
 
+    @Column(length = 75,name = "password")
+    private String password;
+
     @Column(length = 100,name = "email")
     private String email;
     @Column(length = 15,name = "Contacts")

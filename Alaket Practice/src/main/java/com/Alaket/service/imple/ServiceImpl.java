@@ -24,6 +24,7 @@ public class ServiceImpl implements ProfileService {
         Profile profile = new Profile();
         profile.setName(profileDto.getName());
         profile.setLast_name(profileDto.getLast_name());
+        profile.setPassword(profileDto.getPassword());
         profile.setEmail(profileDto.getEmail());
         profile.setContact(profileDto.getContact());
         profile.setBirth_date(profileDto.getBirth_date());
@@ -59,6 +60,7 @@ public class ServiceImpl implements ProfileService {
             profileDto.setId(it.getId());
             profileDto.setName(it.getName());
             profileDto.setLast_name(it.getLast_name());
+            profileDto.setPassword(it.getPassword());
             profileDto.setEmail(it.getEmail());
             profileDto.setContact(it.getContact());
             profileDto.setBirth_date(it.getBirth_date());
