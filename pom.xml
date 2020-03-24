@@ -13,6 +13,7 @@
         <module>spring-boot-dockerization</module>
         <module>spring-boot-aop</module>
         <module>spring-boot-graphql</module>
+        <module>spring-boot-rest-template</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
